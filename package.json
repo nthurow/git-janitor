@@ -1,0 +1,8 @@
+{
+  "name": "git-janitor",
+  "version": "0.1.0",
+  "description": "A tool to help with cleaning up git branches",
+  "main": "index.js",
+  "author": "Nick Thurow <nicholas.thurow@optum.com>",
+  "license": "UNLICENSED"
+}
