@@ -1,6 +1,6 @@
 import {createInterface} from 'readline';
 
-import {Reference} from 'nodegit';
+import {Reference, Commit} from 'nodegit';
 import {prompt, ui} from 'inquirer';
 
 import {listBranches, getLatestCommitsForBranch} from './commands/branch';
@@ -14,15 +14,22 @@ export async function main() {
   }, Promise.resolve());
 }
 
-async function callCheckBranch(branch: any) {
+async function callCheckBranch(branch: any, numCommits = 5) {
   // const bottomBar = new ui.BottomBar();
   const branchName = (branch.name && branch.name()) || branch;
-  const answers = await checkBranch(branch);
+  const commits = await getLatestCommitsForBranch(
+    '/Users/nthurow/Work/skyline/shared-component-library',
+    branch,
+    numCommits
+  );
+  const answers = await checkBranch(branch, commits);
 
-  console.log(getLogStatus(answers.test, branchName));
+  console.log(getLogStatus(answers.action, branchName));
   // bottomBar.log.write(getLogStatus(answers.test, branchName));
 
-  if (answers.test === 'more' || answers.test === 'github') {
+  if (answers.action === 'more') {
+    return callCheckBranch(branch, numCommits * 2);
+  } else if (answers.action === 'github') {
     return callCheckBranch(branch);
   }
 }
@@ -46,14 +53,28 @@ function getLogStatus(res: string, branchName: string) {
   }
 }
 
-async function checkBranch(branch: any) {
+async function checkBranch(branch: any, commits: Commit[]) {
   const branchName = (branch.name && branch.name()) || branch;
+
+  const commitInfo = commits
+    .map((commit) => {
+      return `${commit.sha()}
+      ${commit.date()}
+      ${commit.author().name()} <${commit.author().email()}>
+
+      ${commit.message()}`;
+    })
+    .join('\n\n');
+
+  const message = `Showing last commits for branch ${branchName}:
+
+  ${commitInfo}`;
 
   return prompt([
     {
       type: 'expand',
-      message: `Checking branch ${branchName}`,
-      name: 'test',
+      message,
+      name: 'action',
       choices: [
         {
           key: 'd',
