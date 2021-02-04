@@ -4,5 +4,17 @@
   "description": "A tool to help with cleaning up git branches",
   "main": "index.js",
   "author": "Nick Thurow <nicholas.thurow@optum.com>",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "nodegit": "^0.26.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@skyline/prettier": "^0.1.4",
+    "@types/nodegit": "^0.26.2",
+    "@types/uuid": "^8.3.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^3.8.3"
+  }
 }
