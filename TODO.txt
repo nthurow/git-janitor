@@ -1,0 +1,12 @@
+- Use reactive interface to dynamically populate questions
+  - Perhaps this would work better with the bottom bar, such that there can be one bottom bar that persists for all questions?
+
+- Check if branch tip already exists upstream, and if so, put a big blaring message that says so
+
+- Make it prettier
+
+- Implement delete functionality
+
+- Implement open in github functionality
+
+- Add CLI args
