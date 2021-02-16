@@ -17,12 +17,14 @@ function nextQuestion(answer, currentQuestion, nextQuestion) {
 }
 
 export async function main() {
+  const bottomBar = new ui.BottomBar();
   const branches = await listBranches(__dirname);
   let previousBranch = branches.length && branches.pop();
   let x = 0;
 
   prompt(prompts).ui.process.subscribe(answer => {
-    console.log(answer);
+    bottomBar.log.write('Previous answer: ' + answer.answer);
+    //console.log(answer);
 
     let nextCurrentBranch;
 
@@ -41,7 +43,7 @@ export async function main() {
       prompts.complete();
     } else {
       previousBranch = nextCurrentBranch;
-      console.log('Propmoting...');
+      //console.log('Propmoting...');
       prompts.next({
         type: 'expand',
         message: `What do you want to do with branch ${getBranchName(
