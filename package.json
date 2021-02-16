@@ -8,10 +8,10 @@
   "dependencies": {
     "inquirer": "^7.3.3",
     "nodegit": "^0.26.5",
+    "rxjs": "^6.6.3",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@skyline/prettier": "^0.1.4",
     "@types/inquirer": "^7.3.1",
     "@types/nodegit": "^0.26.2",
     "@types/uuid": "^8.3.0",
