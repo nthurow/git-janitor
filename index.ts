@@ -17,7 +17,7 @@ export async function main() {
 
   prompt(prompts).ui.process.subscribe(
     answer => {
-      let nextCurrentBranch;
+      let nextCurrentBranch: string;
 
       if (answer.answer === 'more') {
         nextCurrentBranch = previousBranch;
@@ -39,7 +39,7 @@ export async function main() {
     e => console.log('Error occurred:', e),
     () => {
       console.log('Your answers were:', answers);
-    },
+    }
   );
 
   const currentBranch = previousBranch; // branches.length && branches.pop();
@@ -49,12 +49,12 @@ export async function main() {
 async function askQuestion(
   branch: string,
   id: string | number,
-  numCommits: number,
+  numCommits: number
 ) {
   const commits = await getLatestCommitsForBranch(
     __dirname,
     branch,
-    numCommits,
+    numCommits
   );
   const branchPrompt = getPrompt(branch, id, commits);
 
@@ -84,24 +84,24 @@ function getPrompt(branch: string, id: string | number, commits: Commit[]) {
       {
         key: 'd',
         name: 'Delete',
-        value: 'delete',
+        value: 'delete'
       },
       {
         key: 's',
         name: 'Skip',
-        value: 'skip',
+        value: 'skip'
       },
       {
         key: 'm',
         name: 'See More Commits',
-        value: 'more',
+        value: 'more'
       },
       {
         key: 'o',
         name: 'Open in Github',
-        value: 'github',
-      },
-    ],
+        value: 'github'
+      }
+    ]
   };
 }
 
