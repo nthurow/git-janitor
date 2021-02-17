@@ -6,22 +6,28 @@ export async function listBranches(repoPath: string) {
   const refs = await repo.getReferences();
 
   return refs
-    .filter((ref) => {
+    .filter(ref => {
       return ref.isBranch();
     })
-    .map((ref) => {
+    .map(ref => {
       return ref.name();
     });
-
-  return await repo.getReferences();
 }
 
-export async function getLatestCommitsForBranch(repoPath: string, branch: Reference, numCommits: number) {
+export async function getLatestCommitsForBranch(
+  repoPath: string,
+  branch: string | Reference,
+  numCommits: number,
+) {
   const repo = await Repository.open(repoPath);
   const commits = [await repo.getBranchCommit(branch)];
 
   for (let x = 1; x < numCommits; x++) {
-    commits.push(await commits[commits.length - 1].parent(0));
+    const commit = commits[commits.length - 1];
+
+    if (commit.parentcount() > 0) {
+      commits.push(await commit.parent(0));
+    }
   }
 
   return commits;
