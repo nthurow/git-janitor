@@ -1147,6 +1147,7 @@ __metadata:
     "@types/nodegit": ^0.26.2
     "@types/uuid": ^8.3.0
     "@yarnpkg/pnpify": ^2.4.0
+    chalk: ^4.1.0
     inquirer: ^7.3.3
     nodegit: ^0.26.5
     prettier: ^2.2.1

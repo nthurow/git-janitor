@@ -1,8 +1,11 @@
+import {EOL} from 'os';
+
 import {createInterface} from 'readline';
 
 import {Reference, Commit} from 'nodegit';
 import {prompt, ui} from 'inquirer';
 import {Subject} from 'rxjs';
+import {yellow, blue, white, bgGreen, red, green} from 'chalk';
 
 import {listBranches, getLatestCommitsForBranch} from './commands/branch';
 
@@ -46,7 +49,7 @@ export async function main() {
 
       if (finalAnswer?.answer === 'yes') {
         branchesToDelete.forEach((branchName) => {
-          console.log(`Deleting branch ${branchName}...`);
+          console.log(`${red('Deleting branch')} ${bgGreen(branchName)}${red('...')}`);
         });
       }
     }
@@ -55,11 +58,6 @@ export async function main() {
   const currentBranch = previousBranch; // branches.length && branches.pop();
   askQuestion(currentBranch, 0, numCommits);
 }
-
-const foo = {
-  fizz: 'buzz',
-  who: 'asdf'
-};
 
 function formatAnswer(answer: {name?: string; answer?: any}): {branchName: string; answer: string} {
   const branchNameParts = answer.name?.split('_');
@@ -80,15 +78,19 @@ function showSummary(answers: {branchName: string; answer: string}[]) {
   const branchesToDelete = getBranchesToDelete(answers);
   const branchesToSkip = getBranchesToSkip(answers);
 
-  const message = `You have chosen to delete the following branches:
-
-  ${branchesToDelete.join('\n')}
-
-  The following branches were skipped:
-
-  ${branchesToSkip.join('\n')}
-
-  Do you want to continue?`;
+  const message = [
+    '',
+    '',
+    red('You have chosen to delete the following branches:'),
+    '',
+    `    ${yellow(branchesToDelete.join(`${EOL}    `))}`,
+    '',
+    green('The following branches were skipped:'),
+    '',
+    `    ${yellow(branchesToSkip.join(`${EOL}    `))}`,
+    '',
+    white('Do you want to continue?')
+  ].join(EOL);
 
   prompts.next({
     type: 'expand',
@@ -112,17 +114,24 @@ async function askQuestion(branch: string, id: string | number, numCommits: numb
 function getPrompt(branch: string, id: string | number, commits: Commit[]) {
   const commitInfo = commits
     .map((commit) => {
-      return `${commit.sha()}
-      ${commit.date()}
-      ${commit.author().name()} <${commit.author().email()}>
-
-      ${commit.message()}`;
+      return [
+        yellow(commit.sha()),
+        white(`Author: ${commit.author().name()} <${commit.author().email()}>`),
+        white(`Date:   ${commit.date()}`),
+        '',
+        `    ${white(commit.message())}`
+      ].join(EOL);
     })
-    .join('\n\n');
+    .join(`${EOL}${EOL}`);
 
-  const message = `Showing last ${commits.length} commits for branch ${branch}:
-
-  ${commitInfo}`;
+  const message = [
+    '',
+    '',
+    `${blue('Branch name:')} ${bgGreen(branch)}`,
+    blue(`Last ${commits.length} commits:`),
+    '',
+    commitInfo
+  ].join(EOL);
 
   return {
     type: 'expand',
