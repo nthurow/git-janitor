@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Nick Thurow <nicholas.thurow@optum.com>",
   "license": "UNLICENSED",
+  "scripts": {
+    "build": "tsc --noEmit index.ts"
+  },
   "dependencies": {
     "inquirer": "^7.3.3",
     "nodegit": "^0.26.5",
