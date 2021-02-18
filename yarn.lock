@@ -116,6 +116,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^14.14.29":
+  version: 14.14.29
+  resolution: "@types/node@npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz"
+  checksum: 65511c999404471686233ecedbc1faa8a31c4b6f551fdb2da92321364d54cc6b7d93f456efc110f003eb23d24ee3d0f03d59ba0d17d0d5e4781293bd77e0f9ff
+  languageName: node
+  linkType: hard
+
 "@types/nodegit@npm:^0.26.2":
   version: 0.26.12
   resolution: "@types/nodegit@npm:0.26.12"
@@ -1136,6 +1143,7 @@ __metadata:
   resolution: "git-janitor@workspace:."
   dependencies:
     "@types/inquirer": ^7.3.1
+    "@types/node": ^14.14.29
     "@types/nodegit": ^0.26.2
     "@types/uuid": ^8.3.0
     "@yarnpkg/pnpify": ^2.4.0

@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@types/inquirer", "npm:7.3.1"],
+            ["@types/node", "npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz"],
             ["@types/nodegit", "npm:0.26.12"],
             ["@types/uuid", "npm:8.3.0"],
             ["@yarnpkg/pnpify", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
@@ -176,6 +177,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.14.28-f643c75c74-e750df4d5e.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:14.14.28"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.14.29-819d047372-65511c9994.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz"]
           ],
           "linkType": "HARD",
         }]
@@ -1362,6 +1370,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["git-janitor", "workspace:."],
             ["@types/inquirer", "npm:7.3.1"],
+            ["@types/node", "npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz"],
             ["@types/nodegit", "npm:0.26.12"],
             ["@types/uuid", "npm:8.3.0"],
             ["@yarnpkg/pnpify", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
