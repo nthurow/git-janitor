@@ -43,7 +43,7 @@ export async function main(repoPath: string = __dirname) {
       } else {
         previousBranch = nextCurrentBranch;
 
-        askQuestion(nextCurrentBranch, ++x, numCommits);
+        askQuestion(repoPath, nextCurrentBranch, ++x, numCommits);
       }
     },
     (e) => console.log('Error occurred:', e),
@@ -64,7 +64,7 @@ export async function main(repoPath: string = __dirname) {
   );
 
   const currentBranch = previousBranch; // branches.length && branches.pop();
-  askQuestion(currentBranch, 0, numCommits);
+  askQuestion(repoPath, currentBranch, 0, numCommits);
 }
 
 function formatAnswer(answer: {name?: string; answer?: any}): {branchName: string; answer: string} {
@@ -112,8 +112,8 @@ function showSummary(answers: {branchName: string; answer: string}[]) {
   prompts.complete();
 }
 
-async function askQuestion(branch: string, id: string | number, numCommits: number) {
-  const commits = await getLatestCommitsForBranch(__dirname, branch, numCommits);
+async function askQuestion(repoPath: string, branch: string, id: string | number, numCommits: number) {
+  const commits = await getLatestCommitsForBranch(repoPath, branch, numCommits);
   const branchPrompt = getPrompt(branch, id, commits);
 
   prompts.next(branchPrompt);
