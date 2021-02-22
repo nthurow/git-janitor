@@ -1,4 +1,4 @@
-import {Clone, Reference, Repository} from 'nodegit';
+import {Clone, Reference, Repository, Branch} from 'nodegit';
 import {v4} from 'uuid';
 
 export async function listBranches(repoPath: string) {
@@ -27,4 +27,17 @@ export async function getLatestCommitsForBranch(repoPath: string, branch: string
   }
 
   return commits;
+}
+
+export async function deleteBranch(repoPath: string, branch: string | Reference) {
+  let branchToDelete: Reference;
+
+  if (typeof branch === 'string') {
+    const repo = await Repository.open(repoPath);
+    branchToDelete = await Branch.lookup(repo, branch.replace('refs/heads/', ''), Branch.BRANCH.LOCAL);
+  } else {
+    branchToDelete = branch;
+  }
+
+  return branchToDelete.delete();
 }

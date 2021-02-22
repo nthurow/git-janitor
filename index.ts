@@ -7,7 +7,7 @@ import {prompt, ui} from 'inquirer';
 import {Subject} from 'rxjs';
 import {yellow, blue, white, bgGreen, red, green} from 'chalk';
 
-import {listBranches, getLatestCommitsForBranch} from './commands/branch';
+import {listBranches, getLatestCommitsForBranch, deleteBranch} from './commands/branch';
 
 const prompts = new Subject();
 
@@ -48,9 +48,13 @@ export async function main() {
       const branchesToSkip = getBranchesToSkip(answers);
 
       if (finalAnswer?.answer === 'yes') {
-        branchesToDelete.forEach((branchName) => {
+        branchesToDelete.reduce<Promise<unknown>>(async (soFar, branchName) => {
+          await soFar;
+
           console.log(`${red('Deleting branch')} ${bgGreen(branchName)}${red('...')}`);
-        });
+
+          return deleteBranch(__dirname, branchName);
+        }, Promise.resolve());
       }
     }
   );
