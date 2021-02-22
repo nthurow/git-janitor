@@ -41,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz"],
             ["@types/nodegit", "npm:0.26.12"],
             ["@types/uuid", "npm:8.3.0"],
+            ["@types/yargs", "npm:16.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs%2F-%2Fyargs-16.0.0.tgz"],
             ["@yarnpkg/pnpify", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
             ["chalk", "npm:4.1.0"],
             ["inquirer", "npm:7.3.3"],
@@ -49,7 +50,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rxjs", "npm:6.6.3"],
             ["ts-node", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:9.1.1"],
             ["typescript", "patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=cc6730"],
-            ["uuid", "npm:8.3.2"]
+            ["uuid", "npm:8.3.2"],
+            ["yargs", "npm:16.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs%2F-%2Fyargs-16.2.0.tgz"]
           ],
           "linkType": "SOFT",
         }]
@@ -242,6 +244,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-uuid-npm-8.3.0-60b441a3d7-620985aed8.zip/node_modules/@types/uuid/",
           "packageDependencies": [
             ["@types/uuid", "npm:8.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/yargs", [
+        ["npm:16.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs%2F-%2Fyargs-16.0.0.tgz", {
+          "packageLocation": "./.yarn/cache/@types-yargs-npm-16.0.0-12ab0df7e7-a17fa2814a.zip/node_modules/@types/yargs/",
+          "packageDependencies": [
+            ["@types/yargs", "npm:16.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs%2F-%2Fyargs-16.0.0.tgz"],
+            ["@types/yargs-parser", "npm:20.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs-parser%2F-%2Fyargs-parser-20.2.0.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/yargs-parser", [
+        ["npm:20.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs-parser%2F-%2Fyargs-parser-20.2.0.tgz", {
+          "packageLocation": "./.yarn/cache/@types-yargs-parser-npm-20.2.0-af51b2d1db-202b8ca16a.zip/node_modules/@types/yargs-parser/",
+          "packageDependencies": [
+            ["@types/yargs-parser", "npm:20.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs-parser%2F-%2Fyargs-parser-20.2.0.tgz"]
           ],
           "linkType": "HARD",
         }]
@@ -453,6 +474,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ansi-styles-npm-4.3.0-245c7d42c7-ea02c0179f.zip/node_modules/ansi-styles/",
           "packageDependencies": [
             ["ansi-styles", "npm:4.3.0"],
+            ["color-convert", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.3.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fansi-styles%2F-%2Fansi-styles-4.3.0.tgz", {
+          "packageLocation": "./.yarn/cache/ansi-styles-npm-4.3.0-1f0257ce59-ea02c0179f.zip/node_modules/ansi-styles/",
+          "packageDependencies": [
+            ["ansi-styles", "npm:4.3.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fansi-styles%2F-%2Fansi-styles-4.3.0.tgz"],
             ["color-convert", "npm:2.0.1"]
           ],
           "linkType": "HARD",
@@ -834,6 +863,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["cliui", [
+        ["npm:7.0.4::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fcliui%2F-%2Fcliui-7.0.4.tgz", {
+          "packageLocation": "./.yarn/cache/cliui-npm-7.0.4-f8887bb65e-c49ac1d13f.zip/node_modules/cliui/",
+          "packageDependencies": [
+            ["cliui", "npm:7.0.4::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fcliui%2F-%2Fcliui-7.0.4.tgz"],
+            ["string-width", "npm:4.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fstring-width%2F-%2Fstring-width-4.2.0.tgz"],
+            ["strip-ansi", "npm:6.0.0"],
+            ["wrap-ansi", "npm:7.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fwrap-ansi%2F-%2Fwrap-ansi-7.0.0.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["clone-response", [
         ["npm:1.0.2::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fclone-response%2F-%2Fclone-response-1.0.2.tgz", {
           "packageLocation": "./.yarn/cache/clone-response-npm-1.0.2-ac2562dcbd-71832f9219.zip/node_modules/clone-response/",
@@ -1120,6 +1161,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["escalade", [
+        ["npm:3.1.1::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fescalade%2F-%2Fescalade-3.1.1.tgz", {
+          "packageLocation": "./.yarn/cache/escalade-npm-3.1.1-b25489f9cb-1e31ff50d6.zip/node_modules/escalade/",
+          "packageDependencies": [
+            ["escalade", "npm:3.1.1::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fescalade%2F-%2Fescalade-3.1.1.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["escape-string-regexp", [
         ["npm:1.0.5", {
           "packageLocation": "./.yarn/cache/escape-string-regexp-npm-1.0.5-3284de402f-f9484b8b4c.zip/node_modules/escape-string-regexp/",
@@ -1333,6 +1383,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["get-caller-file", [
+        ["npm:2.0.5::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fget-caller-file%2F-%2Fget-caller-file-2.0.5.tgz", {
+          "packageLocation": "./.yarn/cache/get-caller-file-npm-2.0.5-f554076115-9dd9e1e259.zip/node_modules/get-caller-file/",
+          "packageDependencies": [
+            ["get-caller-file", "npm:2.0.5::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fget-caller-file%2F-%2Fget-caller-file-2.0.5.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["get-intrinsic", [
         ["npm:1.1.1::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fget-intrinsic%2F-%2Fget-intrinsic-1.1.1.tgz", {
           "packageLocation": "./.yarn/cache/get-intrinsic-npm-1.1.1-22bf03162d-acf1506f25.zip/node_modules/get-intrinsic/",
@@ -1374,6 +1433,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz"],
             ["@types/nodegit", "npm:0.26.12"],
             ["@types/uuid", "npm:8.3.0"],
+            ["@types/yargs", "npm:16.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs%2F-%2Fyargs-16.0.0.tgz"],
             ["@yarnpkg/pnpify", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
             ["chalk", "npm:4.1.0"],
             ["inquirer", "npm:7.3.3"],
@@ -1382,7 +1442,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rxjs", "npm:6.6.3"],
             ["ts-node", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:9.1.1"],
             ["typescript", "patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=cc6730"],
-            ["uuid", "npm:8.3.2"]
+            ["uuid", "npm:8.3.2"],
+            ["yargs", "npm:16.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs%2F-%2Fyargs-16.2.0.tgz"]
           ],
           "linkType": "SOFT",
         }]
@@ -2789,6 +2850,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["require-directory", [
+        ["npm:2.1.1::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Frequire-directory%2F-%2Frequire-directory-2.1.1.tgz", {
+          "packageLocation": "./.yarn/cache/require-directory-npm-2.1.1-9326b84593-f495d02d89.zip/node_modules/require-directory/",
+          "packageDependencies": [
+            ["require-directory", "npm:2.1.1::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Frequire-directory%2F-%2Frequire-directory-2.1.1.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["resolve-alpn", [
         ["npm:1.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fresolve-alpn%2F-%2Fresolve-alpn-1.0.0.tgz", {
           "packageLocation": "./.yarn/cache/resolve-alpn-npm-1.0.0-0581c27d7d-17baee01c0.zip/node_modules/resolve-alpn/",
@@ -3097,6 +3167,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/string-width-npm-4.2.0-c4a2a66200-cf1e8acddf.zip/node_modules/string-width/",
           "packageDependencies": [
             ["string-width", "npm:4.2.0"],
+            ["emoji-regex", "npm:8.0.0"],
+            ["is-fullwidth-code-point", "npm:3.0.0"],
+            ["strip-ansi", "npm:6.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fstring-width%2F-%2Fstring-width-4.2.0.tgz", {
+          "packageLocation": "./.yarn/cache/string-width-npm-4.2.0-a1614c1c33-cf1e8acddf.zip/node_modules/string-width/",
+          "packageDependencies": [
+            ["string-width", "npm:4.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fstring-width%2F-%2Fstring-width-4.2.0.tgz"],
             ["emoji-regex", "npm:8.0.0"],
             ["is-fullwidth-code-point", "npm:3.0.0"],
             ["strip-ansi", "npm:6.0.0"]
@@ -3476,6 +3556,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["wrap-ansi", [
+        ["npm:7.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fwrap-ansi%2F-%2Fwrap-ansi-7.0.0.tgz", {
+          "packageLocation": "./.yarn/cache/wrap-ansi-npm-7.0.0-d6b68cd7a0-09939dd775.zip/node_modules/wrap-ansi/",
+          "packageDependencies": [
+            ["wrap-ansi", "npm:7.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fwrap-ansi%2F-%2Fwrap-ansi-7.0.0.tgz"],
+            ["ansi-styles", "npm:4.3.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fansi-styles%2F-%2Fansi-styles-4.3.0.tgz"],
+            ["string-width", "npm:4.2.0"],
+            ["strip-ansi", "npm:6.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["wrappy", [
         ["npm:1.0.2", {
           "packageLocation": "./.yarn/cache/wrappy-npm-1.0.2-916de4d4b3-519fcda0fc.zip/node_modules/wrappy/",
@@ -3494,6 +3586,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["y18n", [
+        ["npm:5.0.5::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fy18n%2F-%2Fy18n-5.0.5.tgz", {
+          "packageLocation": "./.yarn/cache/y18n-npm-5.0.5-faab0ae9f7-a7d41b0ccc.zip/node_modules/y18n/",
+          "packageDependencies": [
+            ["y18n", "npm:5.0.5::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fy18n%2F-%2Fy18n-5.0.5.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["yallist", [
         ["npm:3.1.1", {
           "packageLocation": "./.yarn/cache/yallist-npm-3.1.1-a568a556b4-f352c93b92.zip/node_modules/yallist/",
@@ -3506,6 +3607,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yallist-npm-4.0.0-367b715297-a2960ef879.zip/node_modules/yallist/",
           "packageDependencies": [
             ["yallist", "npm:4.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyallist%2F-%2Fyallist-4.0.0.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["yargs", [
+        ["npm:16.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs%2F-%2Fyargs-16.2.0.tgz", {
+          "packageLocation": "./.yarn/cache/yargs-npm-16.2.0-ef0a09d828-a79ce1f043.zip/node_modules/yargs/",
+          "packageDependencies": [
+            ["yargs", "npm:16.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs%2F-%2Fyargs-16.2.0.tgz"],
+            ["cliui", "npm:7.0.4::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fcliui%2F-%2Fcliui-7.0.4.tgz"],
+            ["escalade", "npm:3.1.1::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fescalade%2F-%2Fescalade-3.1.1.tgz"],
+            ["get-caller-file", "npm:2.0.5::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fget-caller-file%2F-%2Fget-caller-file-2.0.5.tgz"],
+            ["require-directory", "npm:2.1.1::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Frequire-directory%2F-%2Frequire-directory-2.1.1.tgz"],
+            ["string-width", "npm:4.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fstring-width%2F-%2Fstring-width-4.2.0.tgz"],
+            ["y18n", "npm:5.0.5::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fy18n%2F-%2Fy18n-5.0.5.tgz"],
+            ["yargs-parser", "npm:20.2.6::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs-parser%2F-%2Fyargs-parser-20.2.6.tgz"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["yargs-parser", [
+        ["npm:20.2.6::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs-parser%2F-%2Fyargs-parser-20.2.6.tgz", {
+          "packageLocation": "./.yarn/cache/yargs-parser-npm-20.2.6-36f9e78ce6-ed21fc0f35.zip/node_modules/yargs-parser/",
+          "packageDependencies": [
+            ["yargs-parser", "npm:20.2.6::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs-parser%2F-%2Fyargs-parser-20.2.6.tgz"]
           ],
           "linkType": "HARD",
         }]
