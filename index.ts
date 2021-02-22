@@ -11,8 +11,12 @@ import {listBranches, getLatestCommitsForBranch, deleteBranch} from './commands/
 
 const prompts = new Subject();
 
-export async function main() {
-  const branches = await listBranches(__dirname);
+// TODO:
+//   - skip master branch
+//   - add Github option
+//   - indicator to show if branch is only local
+export async function main(repoPath: string = __dirname) {
+  const branches = await listBranches(repoPath);
   const answers: {branchName: string; answer: string}[] = [];
   let finalAnswer: {name?: string; answer?: string};
   let previousBranch = branches.length && branches.pop();
@@ -53,7 +57,7 @@ export async function main() {
 
           console.log(`${red('Deleting branch')} ${bgGreen(branchName)}${red('...')}`);
 
-          return deleteBranch(__dirname, branchName);
+          return deleteBranch(repoPath, branchName);
         }, Promise.resolve());
       }
     }
@@ -165,5 +169,3 @@ function getPrompt(branch: string, id: string | number, commits: Commit[]) {
     ]
   };
 }
-
-main();
