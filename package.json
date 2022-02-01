@@ -1,6 +1,6 @@
 {
   "name": "@nthurow/git-janitor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tool to help with cleaning up git branches",
   "author": "Nick Thurow",
   "license": "UNLICENSED",
