@@ -41,6 +41,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nthurow/git-janitor@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@nthurow/git-janitor@workspace:."
+  dependencies:
+    "@types/inquirer": ^7.3.1
+    "@types/node": ^14.14.29
+    "@types/nodegit": ^0.26.2
+    "@types/uuid": ^8.3.0
+    "@types/yargs": ^16.0.0
+    "@yarnpkg/pnpify": ^2.4.0
+    chalk: ^4.1.0
+    inquirer: ^7.3.3
+    nodegit: ^0.26.5
+    prettier: ^2.2.1
+    rimraf: ^3.0.2
+    rxjs: ^6.6.3
+    ts-node: ^9.1.1
+    typescript: ^3.8.3
+    uuid: ^8.3.2
+    yargs: ^16.2.0
+  languageName: unknown
+  linkType: soft
+
 "@sindresorhus/is@npm:^4.0.0":
   version: 4.0.0
   resolution: "@sindresorhus/is@npm:4.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40sindresorhus%2Fis%2F-%2Fis-4.0.0.tgz"
@@ -1187,29 +1210,6 @@ __metadata:
   checksum: 2650725bc6939616da8432e5351ca87d8b29421bb8dc19c21bad2c37cd337d2a50d36fcc398ce0c16a075f6079afe114131780dca7e2f4b96063e53e7d28fd7a
   languageName: node
   linkType: hard
-
-"git-janitor@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "git-janitor@workspace:."
-  dependencies:
-    "@types/inquirer": ^7.3.1
-    "@types/node": ^14.14.29
-    "@types/nodegit": ^0.26.2
-    "@types/uuid": ^8.3.0
-    "@types/yargs": ^16.0.0
-    "@yarnpkg/pnpify": ^2.4.0
-    chalk: ^4.1.0
-    inquirer: ^7.3.3
-    nodegit: ^0.26.5
-    prettier: ^2.2.1
-    rimraf: ^3.0.2
-    rxjs: ^6.6.3
-    ts-node: ^9.1.1
-    typescript: ^3.8.3
-    uuid: ^8.3.2
-    yargs: ^16.2.0
-  languageName: unknown
-  linkType: soft
 
 "glob-parent@npm:^5.1.0":
   version: 5.1.1

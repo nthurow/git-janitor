@@ -1,9 +1,8 @@
 {
-  "name": "git-janitor",
+  "name": "@nthurow/git-janitor",
   "version": "0.1.0",
   "description": "A tool to help with cleaning up git branches",
-  "main": "index.js",
-  "author": "Nick Thurow <nicholas.thurow@optum.com>",
+  "author": "Nick Thurow",
   "license": "UNLICENSED",
   "scripts": {
     "build": "tsc --noEmit src/cli.ts",

@@ -19,14 +19,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "git-janitor",
+        "name": "@nthurow/git-janitor",
         "reference": "workspace:."
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["git-janitor", ["workspace:."]]
+      ["@nthurow/git-janitor", ["workspace:."]]
     ],
     "fallbackPool": [
     ],
@@ -42,14 +42,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/nodegit", "npm:0.26.12"],
             ["@types/uuid", "npm:8.3.0"],
             ["@types/yargs", "npm:16.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs%2F-%2Fyargs-16.0.0.tgz"],
-            ["@yarnpkg/pnpify", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
+            ["@yarnpkg/pnpify", "virtual:f5fc0ae2977df3f39bf18d0671cca6ace27fd628905a23dd8d3447db4efe3e51db56097182458da0e5101366fef786b4f828483e959e93e706111a6c9f09b261#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
             ["chalk", "npm:4.1.0"],
             ["inquirer", "npm:7.3.3"],
             ["nodegit", "npm:0.26.5"],
             ["prettier", "npm:2.2.1"],
             ["rimraf", "npm:3.0.2::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Frimraf%2F-%2Frimraf-3.0.2.tgz"],
             ["rxjs", "npm:6.6.3"],
-            ["ts-node", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:9.1.1"],
+            ["ts-node", "virtual:f5fc0ae2977df3f39bf18d0671cca6ace27fd628905a23dd8d3447db4efe3e51db56097182458da0e5101366fef786b4f828483e959e93e706111a6c9f09b261#npm:9.1.1"],
             ["typescript", "patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=cc6730"],
             ["uuid", "npm:8.3.2"],
             ["yargs", "npm:16.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs%2F-%2Fyargs-16.2.0.tgz"]
@@ -96,6 +96,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fastq", "npm:1.10.1::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Ffastq%2F-%2Ffastq-1.10.1.tgz"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["@nthurow/git-janitor", [
+        ["workspace:.", {
+          "packageLocation": "./",
+          "packageDependencies": [
+            ["@nthurow/git-janitor", "workspace:."],
+            ["@types/inquirer", "npm:7.3.1"],
+            ["@types/node", "npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz"],
+            ["@types/nodegit", "npm:0.26.12"],
+            ["@types/uuid", "npm:8.3.0"],
+            ["@types/yargs", "npm:16.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs%2F-%2Fyargs-16.0.0.tgz"],
+            ["@yarnpkg/pnpify", "virtual:f5fc0ae2977df3f39bf18d0671cca6ace27fd628905a23dd8d3447db4efe3e51db56097182458da0e5101366fef786b4f828483e959e93e706111a6c9f09b261#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
+            ["chalk", "npm:4.1.0"],
+            ["inquirer", "npm:7.3.3"],
+            ["nodegit", "npm:0.26.5"],
+            ["prettier", "npm:2.2.1"],
+            ["rimraf", "npm:3.0.2::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Frimraf%2F-%2Frimraf-3.0.2.tgz"],
+            ["rxjs", "npm:6.6.3"],
+            ["ts-node", "virtual:f5fc0ae2977df3f39bf18d0671cca6ace27fd628905a23dd8d3447db4efe3e51db56097182458da0e5101366fef786b4f828483e959e93e706111a6c9f09b261#npm:9.1.1"],
+            ["typescript", "patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=cc6730"],
+            ["uuid", "npm:8.3.2"],
+            ["yargs", "npm:16.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs%2F-%2Fyargs-16.2.0.tgz"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@sindresorhus/is", [
@@ -372,10 +397,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz", {
-          "packageLocation": "./.yarn/$$virtual/@yarnpkg-pnpify-virtual-25cd23da15/0/cache/@yarnpkg-pnpify-npm-2.4.0-ac554cedae-89bbbe7f62.zip/node_modules/@yarnpkg/pnpify/",
+        ["virtual:f5fc0ae2977df3f39bf18d0671cca6ace27fd628905a23dd8d3447db4efe3e51db56097182458da0e5101366fef786b4f828483e959e93e706111a6c9f09b261#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz", {
+          "packageLocation": "./.yarn/$$virtual/@yarnpkg-pnpify-virtual-f54668fd74/0/cache/@yarnpkg-pnpify-npm-2.4.0-ac554cedae-89bbbe7f62.zip/node_modules/@yarnpkg/pnpify/",
           "packageDependencies": [
-            ["@yarnpkg/pnpify", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
+            ["@yarnpkg/pnpify", "virtual:f5fc0ae2977df3f39bf18d0671cca6ace27fd628905a23dd8d3447db4efe3e51db56097182458da0e5101366fef786b4f828483e959e93e706111a6c9f09b261#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
             ["@types/eslint", null],
             ["@types/typescript", null],
             ["@yarnpkg/core", "npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fcore%2F-%2Fcore-2.4.0.tgz"],
@@ -1423,31 +1448,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["assert-plus", "npm:1.0.0"]
           ],
           "linkType": "HARD",
-        }]
-      ]],
-      ["git-janitor", [
-        ["workspace:.", {
-          "packageLocation": "./",
-          "packageDependencies": [
-            ["git-janitor", "workspace:."],
-            ["@types/inquirer", "npm:7.3.1"],
-            ["@types/node", "npm:14.14.29::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fnode%2F-%2Fnode-14.14.29.tgz"],
-            ["@types/nodegit", "npm:0.26.12"],
-            ["@types/uuid", "npm:8.3.0"],
-            ["@types/yargs", "npm:16.0.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40types%2Fyargs%2F-%2Fyargs-16.0.0.tgz"],
-            ["@yarnpkg/pnpify", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:2.4.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2F%40yarnpkg%2Fpnpify%2F-%2Fpnpify-2.4.0.tgz"],
-            ["chalk", "npm:4.1.0"],
-            ["inquirer", "npm:7.3.3"],
-            ["nodegit", "npm:0.26.5"],
-            ["prettier", "npm:2.2.1"],
-            ["rimraf", "npm:3.0.2::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Frimraf%2F-%2Frimraf-3.0.2.tgz"],
-            ["rxjs", "npm:6.6.3"],
-            ["ts-node", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:9.1.1"],
-            ["typescript", "patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=cc6730"],
-            ["uuid", "npm:8.3.2"],
-            ["yargs", "npm:16.2.0::__archiveUrl=https%3A%2F%2Frepo1.uhc.com%3A443%2Fartifactory%2Fapi%2Fnpm%2Fnpm-virtual%2Fyargs%2F-%2Fyargs-16.2.0.tgz"]
-          ],
-          "linkType": "SOFT",
         }]
       ]],
       ["glob", [
@@ -3385,10 +3385,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:9.1.1", {
-          "packageLocation": "./.yarn/$$virtual/ts-node-virtual-056abaa43c/0/cache/ts-node-npm-9.1.1-4ad31da228-a90db4a342.zip/node_modules/ts-node/",
+        ["virtual:f5fc0ae2977df3f39bf18d0671cca6ace27fd628905a23dd8d3447db4efe3e51db56097182458da0e5101366fef786b4f828483e959e93e706111a6c9f09b261#npm:9.1.1", {
+          "packageLocation": "./.yarn/$$virtual/ts-node-virtual-87baa49647/0/cache/ts-node-npm-9.1.1-4ad31da228-a90db4a342.zip/node_modules/ts-node/",
           "packageDependencies": [
-            ["ts-node", "virtual:09aa8848262c3f0b3d35b748c6686a941886b8fb3bfe5c612012277d8e81681a24b45457bf565f7219c88b411342d0f8d6161ba6fe930126b07ef33a0578f983#npm:9.1.1"],
+            ["ts-node", "virtual:f5fc0ae2977df3f39bf18d0671cca6ace27fd628905a23dd8d3447db4efe3e51db56097182458da0e5101366fef786b4f828483e959e93e706111a6c9f09b261#npm:9.1.1"],
             ["@types/typescript", null],
             ["arg", "npm:4.1.3"],
             ["create-require", "npm:1.1.1"],
