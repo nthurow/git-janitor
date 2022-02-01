@@ -6,7 +6,8 @@
   "author": "Nick Thurow <nicholas.thurow@optum.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "tsc --noEmit index.ts"
+    "build": "tsc --noEmit cli.ts",
+    "compile": "tsc cli.ts"
   },
   "dependencies": {
     "chalk": "^4.1.0",
