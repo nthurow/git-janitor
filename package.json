@@ -4,6 +4,7 @@
   "description": "A tool to help with cleaning up git branches",
   "author": "Nick Thurow",
   "license": "UNLICENSED",
+  "bin": "./src/cli.js",
   "scripts": {
     "build": "tsc --noEmit src/cli.ts",
     "compile": "tsc src/cli.ts",
