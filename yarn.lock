@@ -1202,6 +1202,7 @@ __metadata:
     inquirer: ^7.3.3
     nodegit: ^0.26.5
     prettier: ^2.2.1
+    rimraf: ^3.0.2
     rxjs: ^6.6.3
     ts-node: ^9.1.1
     typescript: ^3.8.3
