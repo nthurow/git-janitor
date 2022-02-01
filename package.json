@@ -8,7 +8,9 @@
   "scripts": {
     "build": "tsc --noEmit src/cli.ts",
     "compile": "tsc src/cli.ts",
-    "clean": "rimraf src/**/*.{js,d.ts}"
+    "clean": "rimraf src/**/*.{js,d.ts}",
+    "prepublish": "yarn compile",
+    "postpublish": "yarn clean"
   },
   "dependencies": {
     "chalk": "^4.1.0",
