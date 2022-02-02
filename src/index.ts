@@ -11,10 +11,6 @@ import {listBranches, getLatestCommitsForBranch, deleteBranch} from './commands/
 
 const prompts = new Subject();
 
-// TODO:
-//   - skip master branch
-//   - add Github option
-//   - indicator to show if branch is only local
 export async function main(repoPath: string = __dirname) {
   const branches = await listBranches(repoPath);
   const answers: {branchName: string; answer: string}[] = [];
